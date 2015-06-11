@@ -10,3 +10,10 @@ Observed on some machines, though the state of a Bluetooth HCI device is set to 
   * Bluetooth adapter: CSR Bluetooth Dongle (HCI mode) / USB 0a12:0001
 
 This keeper will periodically call `hciconfig` to scan all HCI devices for their states, and reset the PSCAN state for those who have lost it.
+
+Installation
+------------
+Copy the ruby script to `/home` and copy the executatble to `/etc/init.d`.
+
+If you would like the daemon to start automatically, configure it as you usually do with a Linux service, i.e. `update-rc.d hci_pscan_daemon defaults`.
+
